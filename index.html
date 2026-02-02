@@ -1,32 +1,679 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>VENDA KERALA - Jobs Platform</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENDA KERALA | Premium Job Platform for Kerala</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial; text-align: center; padding: 20px; background: #f0f8ff; }
-        .header { background: #0A4D8C; color: white; padding: 30px; }
-        .button { background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; display: inline-block; margin: 10px; }
-        .phone { font-size: 24px; color: #0A4D8C; font-weight: bold; margin: 20px; }
+        /* Premium Color Palette */
+        :root {
+            --primary: #0A4D8C;      /* VENDA Blue */
+            --secondary: #0B6623;    /* Kerala Green */
+            --accent: #FFB300;       /* Gold */
+            --dark: #1A237E;         /* Deep Navy */
+            --light: #F8F9FA;        /* Light Gray */
+            --white: #FFFFFF;
+            --text: #2D3748;
+            --text-light: #718096;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        /* Premium Header */
+        .premium-header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: var(--white);
+            padding: 1.2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(10, 77, 140, 0.15);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            opacity: 0.9;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+            opacity: 1;
+        }
+        
+        .cta-button {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(255, 179, 0, 0.25);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 179, 0, 0.35);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(10, 77, 140, 0.05), rgba(255, 255, 255, 0.1)),
+                        url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            margin-top: 70px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-title {
+            font-size: 3.2rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(10, 77, 140, 0.25);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(10, 77, 140, 0.35);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid var(--primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 6rem 2rem;
+            background: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(10, 77, 140, 0.1) 0%, rgba(11, 102, 35, 0.1) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        
+        /* How It Works */
+        .process-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 3rem auto;
+            flex-wrap: wrap;
+        }
+        
+        .process-step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            color: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 6px 15px rgba(255, 179, 0, 0.3);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(rgba(10, 77, 140, 0.9), rgba(10, 77, 140, 0.95)),
+                        url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        .premium-footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo span {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .header-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>VENDA KERALA</h1>
-        <p>വേണ്ടുന്നവർക്ക് വേണ്ടുന്ന ജോലി</p>
-    </div>
-    
-    <h2>Kerala's Local Job Platform</h2>
-    <p>Find staff or jobs in Kozhikode & across Kerala</p>
-    
-    <div class="phone">📞 +91 8086514150</div>
-    
-    <a href="https://wa.me/918086514150" class="button">📱 WhatsApp for Jobs</a>
-    <a href="https://wa.me/918086514150?text=I want to post a job" class="button">🏢 Post Job (Free)</a>
-    
-    <h3>Features:</h3>
-    <p>✅ Verified Jobs • 💰 Salary Clear • 📍 Local • ⚡ Fast Hiring</p>
-    
-    <p style="margin-top: 40px;">Website launching soon. Contact via WhatsApp for now.</p>
-    <p>© VENDA KERALA 2024</p>
+    <!-- Premium Header -->
+    <header class="premium-header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-handshake"></i>
+                VENDA<span>KERALA</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#process">How It Works</a>
+                <a href="#employers">For Employers</a>
+                <a href="#seekers">For Job Seekers</a>
+                <a href="https://wa.me/918086514150" class="cta-button">
+                    <i class="fab fa-whatsapp"></i> Get Started
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Kerala's Premium Job Platform</h1>
+            <p class="hero-subtitle">
+                Connecting premium talent with exceptional opportunities across Kerala. 
+                Verified employers, transparent salaries, and instant hiring.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I%20want%20to%20hire%20staff." 
+                   class="btn-primary">
+                    <i class="fas fa-briefcase"></i> Hire Premium Staff
+                </a>
+                <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I'm%20looking%20for%20a%20job." 
+                   class="btn-secondary">
+                    <i class="fas fa-user-tie"></i> Find Premium Jobs
+                </a>
+            </div>
+            
+            <p style="margin-top: 2rem; color: var(--text-light); font-size: 0.9rem;">
+                <i class="fas fa-shield-alt"></i> 100% Verified • <i class="fas fa-rupee-sign"></i> Salary Transparent • 
+                <i class="fas fa-bolt"></i> 24-Hour Hiring
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose VENDA KERALA?</h2>
+            <p class="section-subtitle">Premium features for premium results</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 class="feature-title">Verified Profiles</h3>
+                    <p>Every employer and job seeker undergoes thorough verification for your safety and trust.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="feature-title">Salary Transparency</h3>
+                    <p>No hidden figures. See exact salary ranges before applying or posting jobs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">24-Hour Hiring</h3>
+                    <p>Urgent staffing needs? We guarantee qualified candidates within 24 hours.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Hyper-Local Focus</h3>
+                    <p>Jobs and candidates specifically from your city or town in Kerala.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>24h</h3>
+                <p>Average Hiring Time</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Verified Employers</p>
+            </div>
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Premium Job Seekers</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Kerala Businesses</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="process-section" id="process">
+        <div class="container">
+            <h2 class="section-title">Simple & Premium Process</h2>
+            <p class="section-subtitle">Three steps to your perfect match</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Post Your Requirement</h3>
+                    <p>Share job details or your profile. Our team ensures premium presentation.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Smart Matching</h3>
+                    <p>Our algorithm and experts find the perfect match based on multiple criteria.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Hire with Confidence</h3>
+                    <p>Connect, interview, and hire. We facilitate smooth onboarding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Experience Premium Hiring?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Join Kerala's most trusted job platform. Premium service, exceptional results.
+            </p>
+            
+            <a href="https://wa.me/918086514150" class="btn-primary" style="background: var(--accent); color: var(--dark);">
+                <i class="fab fa-whatsapp"></i> Start Premium Conversation
+            </a>
+            
+            <p style="margin-top: 2rem; opacity: 0.9;">
+                <i class="fas fa-phone-alt"></i> +91 8086514150 • 
+                <i class="fas fa-envelope"></i> hello@vendakerala.in
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="premium-footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">VENDA<span>KERALA</span></div>
+                <p>Kerala's premium job platform connecting exceptional talent with outstanding opportunities since 2024.</p>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a><br>
+                <a href="#features">Features</a><br>
+                <a href="#process">How It Works</a><br>
+                <a href="#employers">For Employers</a><br>
+                <a href="#seekers">For Job Seekers</a>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Kozhikode, Kerala</p>
+                <p><i class="fas fa-phone"></i> +91 8086514150</p>
+                <p><i class="fas fa-envelope"></i> hello@vendakerala.in</p>
+                <p><i class="fab fa-whatsapp"></i> WhatsApp Available 24/7</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2024 VENDA KERALA. All rights reserved. | Premium Job Platform for Kerala
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/918086514150" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.premium-header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(10, 77, 140, 0.2)';
+            } else {
+                header.style.boxShadow = '0 4px 20px rgba(10, 77, 140, 0.15)';
+            }
+        });
+    </script>
 </body>
 </html>
