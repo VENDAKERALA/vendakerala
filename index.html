@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENDA KERALA | Kerala's #1 Local Job Platform - Verified Jobs & Staffing Solutions</title>
-    <meta name="description" content="Kerala's premium job platform connecting businesses with verified local talent. 24-hour hiring, salary transparency, Malayalam support. Start in Kozhikode.">
+    <title>VENDA | Local Job Platform - Verified Jobs & Trusted Hiring</title>
+    <meta name="description" content="VENDA connects businesses with verified local talent and job seekers with trusted opportunities. 24-hour hiring, salary transparency.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* ===== PREMIUM THEME ===== */
+        /* ===== MODERN THEME ===== */
         :root {
-            --primary: #0A4D8C;           /* VENDA Trust Blue */
-            --primary-dark: #083A6D;      /* Darker Blue */
-            --secondary: #0B6623;         /* Kerala Green */
-            --accent: #FFB300;            /* Gold/Orange */
-            --accent-light: #FFD54F;      /* Light Gold */
-            --dark: #1A237E;              /* Deep Navy */
-            --light: #F8F9FA;             /* Light Gray */
-            --light-blue: #E3F2FD;        /* Sky Blue */
+            --primary: #2563EB;           /* Professional Blue */
+            --primary-dark: #1D4ED8;      /* Darker Blue */
+            --secondary: #059669;         /* Success Green */
+            --accent: #F59E0B;            /* Warm Amber */
+            --accent-light: #FBBF24;      /* Light Amber */
+            --dark: #1E293B;              /* Charcoal */
+            --light: #F8FAFC;             /* Light Gray */
+            --light-blue: #EFF6FF;        /* Sky Blue */
             --white: #FFFFFF;
-            --text: #2D3748;              /* Dark Gray */
-            --text-light: #718096;        /* Medium Gray */
-            --success: #0B6623;           /* Green */
-            --warning: #E65100;           /* Orange */
-            --danger: #D32F2F;            /* Red */
+            --text: #334155;              /* Slate Gray */
+            --text-light: #64748B;        /* Medium Gray */
+            --success: #059669;           /* Green */
+            --warning: #EA580C;           /* Orange */
+            --danger: #DC2626;            /* Red */
         }
 
         * {
@@ -37,7 +37,7 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             color: var(--text);
             line-height: 1.7;
             background: var(--white);
@@ -45,7 +45,7 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             line-height: 1.3;
         }
@@ -53,19 +53,19 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
         }
 
-        /* ===== PREMIUM HEADER ===== */
-        .premium-header {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-            color: var(--white);
+        /* ===== HEADER ===== */
+        .main-header {
+            background: var(--white);
+            color: var(--dark);
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 25px rgba(10, 77, 140, 0.2);
+            box-shadow: 0 2px 20px rgba(30, 41, 59, 0.08);
             transition: all 0.3s ease;
         }
 
@@ -78,39 +78,36 @@
         .logo-wrapper {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .logo-icon {
-            background: var(--accent);
-            color: var(--dark);
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: bold;
         }
 
         .logo-text {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 700;
-        }
-
-        .logo-text span {
-            color: var(--accent);
+            color: var(--primary);
         }
 
         .nav-menu {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             align-items: center;
         }
 
         .nav-link {
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--text);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -119,138 +116,164 @@
         }
 
         .nav-link:hover {
-            color: var(--accent);
+            color: var(--primary);
         }
 
-        .nav-link::after {
+        .nav-link.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .nav-link.active::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -8px;
             left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s;
-        }
-
-        .nav-link:hover::after {
             width: 100%;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
         }
 
         .header-cta {
-            background: var(--accent);
-            color: var(--dark);
-            padding: 0.8rem 1.8rem;
-            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s;
             display: flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 15px rgba(255, 179, 0, 0.3);
+            font-size: 0.9rem;
         }
 
         .header-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 179, 0, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
         }
 
         /* ===== HERO SECTION ===== */
         .hero-section {
-            background: linear-gradient(rgba(10, 77, 140, 0.85), rgba(26, 35, 126, 0.9)),
-                        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            padding: 12rem 0 8rem;
-            color: white;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(5, 150, 105, 0.03));
+            padding: 10rem 0 6rem;
             text-align: center;
             margin-top: 70px;
         }
 
         .hero-title {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            background: linear-gradient(to right, var(--accent), var(--accent-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--dark);
+            line-height: 1.2;
         }
 
         .hero-subtitle {
-            font-size: 1.4rem;
-            opacity: 0.9;
+            font-size: 1.3rem;
+            color: var(--text-light);
             max-width: 700px;
             margin: 0 auto 2rem;
             line-height: 1.6;
         }
 
-        .hero-stats {
+        .dual-focus {
             display: flex;
             justify-content: center;
             gap: 3rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
             flex-wrap: wrap;
         }
 
-        .hero-stat {
+        .focus-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            width: 320px;
             text-align: center;
+            transition: all 0.3s;
+            border-top: 4px solid var(--primary);
         }
 
-        .hero-stat h3 {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
+        .focus-card.employer {
+            border-top-color: var(--primary);
+        }
+
+        .focus-card.seeker {
+            border-top-color: var(--secondary);
+        }
+
+        .focus-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .focus-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(5, 150, 105, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 0 auto 1.5rem;
+        }
+
+        .focus-card.seeker .focus-icon {
+            color: var(--secondary);
         }
 
         .hero-buttons {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
-            margin-top: 3rem;
+            margin-top: 2rem;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1.1rem 2.2rem;
-            border-radius: 12px;
+            padding: 1rem 2rem;
+            border-radius: 10px;
             font-weight: 600;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 10px;
             transition: all 0.3s;
-            font-size: 1.05rem;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent), var(--accent-light));
-            color: var(--dark);
-            box-shadow: 0 8px 25px rgba(255, 179, 0, 0.35);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(255, 179, 0, 0.45);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
         }
 
         .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: linear-gradient(135deg, var(--secondary), #0D8A2E);
+            color: var(--white);
+            box-shadow: 0 6px 20px rgba(5, 150, 105, 0.25);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: white;
             transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(5, 150, 105, 0.35);
         }
 
-        /* ===== PROBLEM SECTION ===== */
-        .problem-section {
-            padding: 6rem 0;
+        /* ===== FEATURES HIGHLIGHT ===== */
+        .features-highlight {
+            padding: 5rem 0;
             background: var(--light);
         }
 
@@ -260,160 +283,200 @@
         }
 
         .section-title {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: var(--dark);
             margin-bottom: 1rem;
         }
 
         .section-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-light);
             max-width: 700px;
             margin: 0 auto;
         }
 
-        .problem-grid {
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin-top: 3rem;
         }
 
-        .problem-card {
-            background: white;
-            padding: 2.5rem;
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
             border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
             transition: all 0.3s;
-            border-left: 4px solid var(--primary);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            text-align: center;
         }
 
-        .problem-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
         }
 
-        .problem-icon {
+        .feature-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, rgba(255, 179, 0, 0.1), rgba(10, 77, 140, 0.1));
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(245, 158, 11, 0.1));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.8rem;
             color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        /* ===== SOLUTION SECTION ===== */
-        .solution-section {
-            padding: 6rem 0;
-            background: white;
-        }
-
-        .solution-highlight {
-            background: linear-gradient(135deg, var(--light-blue), white);
-            border-radius: 20px;
-            padding: 4rem;
-            margin: 3rem 0;
-            box-shadow: 0 10px 40px rgba(10, 77, 140, 0.1);
-            border: 1px solid rgba(10, 77, 140, 0.1);
-        }
-
-        /* ===== HOW IT WORKS ===== */
-        .process-section {
-            padding: 6rem 0;
-            background: var(--light);
-        }
-
-        .process-timeline {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            margin: 4rem 0;
-        }
-
-        .process-timeline::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 10%;
-            right: 10%;
-            height: 3px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            z-index: 1;
-        }
-
-        .process-step {
-            flex: 1;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .step-number {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary), var(--dark));
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
             margin: 0 auto 1.5rem;
-            box-shadow: 0 10px 25px rgba(10, 77, 140, 0.3);
-            border: 5px solid white;
         }
 
-        /* ===== FEATURES ===== */
-        .features-section {
-            padding: 6rem 0;
-            background: white;
+        /* ===== CAREER TOOLS SECTION ===== */
+        .tools-section {
+            padding: 5rem 0;
+            background: var(--white);
         }
 
-        .features-grid {
+        .tools-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
             margin-top: 3rem;
         }
 
-        .feature-card {
-            background: white;
-            padding: 2.5rem;
+        .tool-card {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(5, 150, 105, 0.03));
+            padding: 3rem 2.5rem;
             border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
             transition: all 0.3s;
-            border: 1px solid rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            text-align: center;
         }
 
-        .feature-card:hover {
+        .tool-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.1);
             border-color: var(--primary);
         }
 
-        .feature-badge {
+        .tool-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .process-section {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+
+        .process-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .process-column {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .process-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .process-step {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary);
+        }
+
+        .process-step.seeker {
+            border-left-color: var(--secondary);
+        }
+
+        .step-number {
             display: inline-block;
-            padding: 0.3rem 1rem;
+            width: 32px;
+            height: 32px;
             background: var(--primary);
             color: white;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-right: 10px;
         }
 
-        /* ===== BUSINESS MODEL ===== */
-        .model-section {
-            padding: 6rem 0;
-            background: linear-gradient(135deg, var(--light-blue), white);
+        .process-step.seeker .step-number {
+            background: var(--secondary);
         }
 
-        .pricing-table {
+        /* ===== PROBLEM SECTION ===== */
+        .problem-section {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .problem-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(220, 38, 38, 0.1);
+            color: var(--danger);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== PRICING ===== */
+        .pricing-section {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+
+        .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
@@ -421,10 +484,10 @@
         }
 
         .pricing-card {
-            background: white;
-            padding: 2.5rem;
+            background: var(--white);
+            padding: 2.5rem 2rem;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             text-align: center;
             transition: all 0.3s;
             border: 2px solid transparent;
@@ -457,58 +520,44 @@
             margin: 1rem 0;
         }
 
-        /* ===== KOZHIKODE FOCUS ===== */
+        /* ===== CITY FOCUS ===== */
         .city-section {
-            padding: 6rem 0;
-            background: linear-gradient(rgba(10, 77, 140, 0.05), rgba(10, 77, 140, 0.02));
+            padding: 5rem 0;
+            background: var(--white);
         }
 
         .city-highlight {
-            background: white;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(5, 150, 105, 0.03));
             border-radius: 20px;
-            padding: 4rem;
-            margin-top: 3rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            border-left: 8px solid var(--secondary);
+            padding: 3rem;
+            margin-top: 2rem;
+            border: 1px solid rgba(37, 99, 235, 0.1);
         }
 
         .zone-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
             margin: 2rem 0;
         }
 
         .zone-card {
-            background: var(--light);
+            background: var(--white);
             padding: 1.5rem;
             border-radius: 12px;
-            border: 1px solid rgba(10, 77, 140, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            transition: all 0.3s;
         }
 
-        /* ===== TESTIMONIALS ===== */
-        .testimonial-section {
-            padding: 6rem 0;
-            background: var(--dark);
-            color: white;
-        }
-
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 3rem auto;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2.5rem;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .zone-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.1);
         }
 
         /* ===== CTA SECTION ===== */
         .cta-section {
-            padding: 6rem 0;
+            padding: 5rem 0;
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             text-align: center;
@@ -516,7 +565,7 @@
 
         .cta-box {
             background: rgba(255, 255, 255, 0.1);
-            padding: 4rem;
+            padding: 3rem;
             border-radius: 20px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -525,16 +574,16 @@
         }
 
         /* ===== FOOTER ===== */
-        .premium-footer {
+        .main-footer {
             background: var(--dark);
             color: white;
-            padding: 5rem 0 2rem;
+            padding: 4rem 0 2rem;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            gap: 2.5rem;
             margin-bottom: 3rem;
         }
 
@@ -542,6 +591,7 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            color: var(--white);
         }
 
         .footer-logo span {
@@ -588,13 +638,13 @@
             right: 30px;
             background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
+            font-size: 28px;
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             z-index: 1000;
             text-decoration: none;
@@ -606,57 +656,42 @@
             box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
         }
 
-        .whatsapp-float::after {
-            content: 'Chat with us!';
-            position: absolute;
-            right: 75px;
-            background: white;
-            color: var(--dark);
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transition: opacity 0.3s;
-            white-space: nowrap;
-        }
-
-        .whatsapp-float:hover::after {
-            opacity: 1;
-        }
-
         /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
             .hero-title {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             
-            .process-timeline {
+            .dual-focus {
                 flex-direction: column;
-                gap: 3rem;
+                align-items: center;
             }
             
-            .process-timeline::before {
-                display: none;
+            .focus-card {
+                width: 100%;
+                max-width: 400px;
             }
             
             .nav-menu {
                 display: none;
             }
+            
+            .pricing-card.popular {
+                transform: none;
+            }
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 0 1.5rem;
+                padding: 0 1rem;
             }
             
             .hero-title {
-                font-size: 2.3rem;
+                font-size: 2rem;
             }
             
             .section-title {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             
             .btn {
@@ -665,6 +700,10 @@
             }
             
             .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .process-container {
                 flex-direction: column;
             }
         }
@@ -691,24 +730,23 @@
     </style>
 </head>
 <body>
-    <!-- Premium Header -->
-    <header class="premium-header" id="header">
+    <!-- Header -->
+    <header class="main-header" id="header">
         <div class="container header-container">
             <div class="logo-wrapper">
-                <div class="logo-icon">VK</div>
-                <div class="logo-text">VENDA<span>KERALA</span></div>
+                <div class="logo-icon">V</div>
+                <div class="logo-text">VENDA</div>
             </div>
             
             <nav class="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#problem" class="nav-link">The Problem</a>
-                <a href="#solution" class="nav-link">Our Solution</a>
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#tools" class="nav-link">Career Tools</a>
                 <a href="#features" class="nav-link">Features</a>
+                <a href="#process" class="nav-link">How It Works</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#kozhikode" class="nav-link">Kozhikode Focus</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="https://wa.me/918086514150" class="header-cta">
-                    <i class="fab fa-whatsapp"></i> Start Hiring
+                    <i class="fab fa-whatsapp"></i> Get Started
                 </a>
             </nav>
         </div>
@@ -717,56 +755,210 @@
     <!-- Hero Section -->
     <section class="hero-section" id="home">
         <div class="container">
-            <h1 class="hero-title animate-fadeInUp">Kerala's Most Trusted Job Platform</h1>
+            <h1 class="hero-title animate-fadeInUp">Find Jobs & Hire Talent Faster</h1>
             <p class="hero-subtitle animate-fadeInUp animate-delay-1">
-                Connecting <strong>verified local businesses</strong> with <strong>qualified job seekers</strong> across Kerala. 
-                No more fake jobs. No more hiring delays. Just <strong>real results in 24 hours</strong>.
+                Connecting verified local businesses with qualified job seekers. No fake posts. No hiring delays. Just real results.
             </p>
             
-            <div class="hero-stats">
-                <div class="hero-stat animate-fadeInUp animate-delay-2">
-                    <h3>24h</h3>
-                    <p>Average Hiring Time</p>
+            <div class="dual-focus">
+                <div class="focus-card employer animate-fadeInUp animate-delay-2">
+                    <div class="focus-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>For Employers</h3>
+                    <p>Hire verified local staff in 24 hours. Post jobs in 2 minutes.</p>
+                    <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I%20need%20to%20hire%20staff." 
+                       class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">
+                        <i class="fas fa-user-plus"></i> Hire Staff Now
+                    </a>
                 </div>
-                <div class="hero-stat animate-fadeInUp animate-delay-2">
-                    <h3>100%</h3>
-                    <p>Verified Employers</p>
-                </div>
-                <div class="hero-stat animate-fadeInUp animate-delay-2">
-                    <h3>₹299</h3>
-                    <p>Starting Price</p>
-                </div>
-                <div class="hero-stat animate-fadeInUp animate-delay-2">
-                    <h3>5+</h3>
-                    <p>Daily Success Stories</p>
+                
+                <div class="focus-card seeker animate-fadeInUp animate-delay-2">
+                    <div class="focus-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>For Job Seekers</h3>
+                    <p>Find verified local jobs with transparent salaries. Apply in seconds.</p>
+                    <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I'm%20looking%20for%20a%20job." 
+                       class="btn btn-secondary" style="margin-top: 1.5rem; width: 100%;">
+                        <i class="fas fa-search"></i> Find Jobs Now
+                    </a>
                 </div>
             </div>
             
             <div class="hero-buttons">
-                <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I%20need%20to%20hire%20staff%20urgently." 
-                   class="btn btn-primary animate-fadeInUp animate-delay-3">
-                    <i class="fas fa-briefcase"></i> I Need Staff (Free Trial)
-                </a>
-                <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I'm%20looking%20for%20a%20job%20in%20Kerala." 
-                   class="btn btn-secondary animate-fadeInUp animate-delay-3">
-                    <i class="fas fa-user-tie"></i> I Need a Job (Free)
-                </a>
+                <div style="text-align: center; width: 100%;">
+                    <p style="color: var(--text-light); margin-top: 2rem; font-size: 0.95rem;">
+                        <i class="fas fa-shield-alt"></i> 100% Verified • 
+                        <i class="fas fa-rupee-sign"></i> Salary Transparent • 
+                        <i class="fas fa-bolt"></i> 24-Hour Hiring
+                    </p>
+                </div>
             </div>
-            
-            <p style="margin-top: 3rem; opacity: 0.9; font-size: 0.95rem;" class="animate-fadeInUp">
-                <i class="fas fa-map-marker-alt"></i> Starting in Kozhikode • 
-                <i class="fas fa-language"></i> Full Malayalam Support • 
-                <i class="fas fa-shield-alt"></i> 100% Verified Platform
-            </p>
         </div>
     </section>
 
-    <!-- The Problem Section -->
-    <section class="problem-section" id="problem">
+    <!-- Career Tools Section -->
+    <section class="tools-section" id="tools">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">The Kerala Hiring Crisis We're Solving</h2>
-                <p class="section-subtitle">Traditional hiring methods are failing Kerala's businesses and job seekers</p>
+                <h2 class="section-title">Free Career Tools</h2>
+                <p class="section-subtitle">Everything you need for your career journey - completely free</p>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-card animate-fadeInUp">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Smart Resume Builder</h3>
+                    <p>Create professional resumes in minutes. Templates optimized for local jobs. Auto-formats for different industries.</p>
+                    <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.2rem;">
+                        <li>Industry-specific templates</li>
+                        <li>ATS-friendly formatting</li>
+                        <li>Malayalam & English options</li>
+                        <li>Download as PDF</li>
+                    </ul>
+                    <a href="https://wa.me/918086514150?text=I%20need%20help%20building%20my%20resume" 
+                       class="btn" style="background: var(--primary); color: white; width: 100%; margin-top: 1rem;">
+                        Build My Resume
+                    </a>
+                </div>
+                
+                <div class="tool-card animate-fadeInUp animate-delay-1">
+                    <div class="tool-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Career Tips & Guidance</h3>
+                    <p>Expert advice for job seekers and career growth. From interview prep to salary negotiation.</p>
+                    <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.2rem;">
+                        <li>Interview preparation guide</li>
+                        <li>Salary negotiation tips</li>
+                        <li>Skill development resources</li>
+                        <li>Career path planning</li>
+                        <li>Local job market insights</li>
+                    </ul>
+                    <a href="https://wa.me/918086514150?text=I%20need%20career%20advice" 
+                       class="btn" style="background: var(--secondary); color: white; width: 100%; margin-top: 1rem;">
+                        Get Career Advice
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-highlight" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose VENDA?</h2>
+                <p class="section-subtitle">Built for real people, solving real problems</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card animate-fadeInUp">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Voice Job Posts</h3>
+                    <p>Record voice notes instead of typing. Perfect for quick job postings.</p>
+                </div>
+                
+                <div class="feature-card animate-fadeInUp animate-delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>One-Click Apply</h3>
+                    <p>Apply with just phone number. No complex forms or resumes needed.</p>
+                </div>
+                
+                <div class="feature-card animate-fadeInUp animate-delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Triple Verification</h3>
+                    <p>Phone, address, and rating verification for complete trust.</p>
+                </div>
+                
+                <div class="feature-card animate-fadeInUp animate-delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Hyper-Local Focus</h3>
+                    <p>Jobs within your locality. Travel time shown for each job.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="process-section" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Simple process for everyone</p>
+            </div>
+            
+            <div class="process-container">
+                <div class="process-column">
+                    <h3 class="process-title">
+                        <i class="fas fa-briefcase" style="color: var(--primary);"></i>
+                        For Employers
+                    </h3>
+                    
+                    <div class="process-step">
+                        <span class="step-number">1</span>
+                        <h4>Post Your Job</h4>
+                        <p>Describe the position, salary, and location. Use voice note or text.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <span class="step-number">2</span>
+                        <h4>Review Applicants</h4>
+                        <p>Get verified candidates within hours. Filter by location and skills.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <span class="step-number">3</span>
+                        <h4>Interview & Hire</h4>
+                        <p>Connect directly with candidates. Hire the right person fast.</p>
+                    </div>
+                </div>
+                
+                <div class="process-column">
+                    <h3 class="process-title">
+                        <i class="fas fa-user-tie" style="color: var(--secondary);"></i>
+                        For Job Seekers
+                    </h3>
+                    
+                    <div class="process-step seeker">
+                        <span class="step-number">1</span>
+                        <h4>Create Profile</h4>
+                        <p>Add your skills, location, and availability. No resume needed.</p>
+                    </div>
+                    
+                    <div class="process-step seeker">
+                        <span class="step-number">2</span>
+                        <h4>Find Jobs</h4>
+                        <p>Browse verified jobs near you. See exact salary and location.</p>
+                    </div>
+                    
+                    <div class="process-step seeker">
+                        <span class="step-number">3</span>
+                        <h4>Apply & Get Hired</h4>
+                        <p>One-click apply. Get interview calls within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Problems We Solve</h2>
+                <p class="section-subtitle">Traditional hiring methods create headaches for everyone</p>
             </div>
             
             <div class="problem-grid">
@@ -775,12 +967,7 @@
                         <i class="fas fa-comment-slash"></i>
                     </div>
                     <h3>WhatsApp Group Chaos</h3>
-                    <p>Unverified jobs, constant spam, fake posts, and zero organization. Job seekers waste hours scrolling through irrelevant messages.</p>
-                    <ul style="margin-top: 1rem; padding-left: 1.2rem; color: var(--text-light);">
-                        <li>No salary transparency</li>
-                        <li>Fake job scams common</li>
-                        <li>No employer verification</li>
-                    </ul>
+                    <p>Fake jobs, spam messages, unverified posts. Wasting hours daily.</p>
                 </div>
                 
                 <div class="problem-card">
@@ -788,162 +975,33 @@
                         <i class="fas fa-newspaper"></i>
                     </div>
                     <h3>Expensive Newspaper Ads</h3>
-                    <p>₹800-₹1500 for 2 days with limited reach. Only 3-5 applications, most unqualified. No targeting, no analytics, pure guesswork.</p>
-                    <ul style="margin-top: 1rem; padding-left: 1.2rem; color: var(--text-light);">
-                        <li>₹1500 for 2-day ad</li>
-                        <li>Only local reach</li>
-                        <li>Slow response time</li>
-                    </ul>
+                    <p>₹1500 for 2 days, few responses, no targeting capabilities.</p>
                 </div>
                 
                 <div class="problem-card">
                     <div class="problem-icon">
                         <i class="fas fa-user-clock"></i>
                     </div>
-                    <h3>Corporate Portals Fail Locals</h3>
-                    <p>Platforms like Indeed are built for corporates, not for Kerala's tea shops, restaurants, or local businesses. Too complex, English-heavy, and expensive.</p>
-                    <ul style="margin-top: 1rem; padding-left: 1.2rem; color: var(--text-light);">
-                        <li>₹5000+ per posting</li>
-                        <li>No Malayalam support</li>
-                        <li>Not local-business friendly</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="problem-card" style="max-width: 800px; margin: 3rem auto;">
-                <div class="problem-icon" style="background: rgba(211, 47, 47, 0.1); color: var(--danger);">
-                    <i class="fas fa-exclamation-triangle"></i>
-                </div>
-                <h3 style="color: var(--danger);">The Real Cost to Businesses</h3>
-                <p><strong>Every day a position stays unfilled:</strong></p>
-                <ul style="margin-top: 1rem; padding-left: 1.2rem;">
-                    <li><strong>Lost Revenue:</strong> ₹3000-₹5000 daily for retail/restaurants</li>
-                    <li><strong>Manager Time:</strong> 2-3 hours daily spent on hiring instead of business</li>
-                    <li><strong>Employee Burnout:</strong> Existing staff overworked covering gaps</li>
-                    <li><strong>Customer Experience:</strong> Suffers due to understaffing</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Solution -->
-    <section class="solution-section" id="solution">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">The VENDA KERALA Solution</h2>
-                <p class="section-subtitle">A platform built specifically for Kerala's unique job market</p>
-            </div>
-            
-            <div class="solution-highlight">
-                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">How We're Different:</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                    <div>
-                        <h4><i class="fas fa-check-circle" style="color: var(--secondary);"></i> Malayalam First</h4>
-                        <p>Complete interface in Malayalam. Voice notes for job posts. Kerala-cultural understanding built-in.</p>
-                    </div>
-                    <div>
-                        <h4><i class="fas fa-check-circle" style="color: var(--secondary);"></i> Hyper-Local</h4>
-                        <p>Jobs within 5km radius. Town/panchayat level targeting. Local business focus.</p>
-                    </div>
-                    <div>
-                        <h4><i class="fas fa-check-circle" style="color: var(--secondary);"></i> Trust Engine</h4>
-                        <p>Phone verification, address verification, user ratings, and instant fake job removal.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Simple Posting</h3>
-                    <p>Business posts job in 2 minutes via WhatsApp or app</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Smart Matching</h3>
-                    <p>AI + manual verification finds perfect local candidates</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Instant Connection</h3>
-                    <p>Candidates contact directly, interviews arranged</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Success Tracking</h3>
-                    <p>We track hires and ensure satisfaction</p>
+                    <h3>Corporate Portals Too Complex</h3>
+                    <p>Too expensive, English-heavy, not designed for local businesses.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section" id="features">
+    <!-- Pricing -->
+    <section class="pricing-section" id="pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Premium Features Designed for Kerala</h2>
-                <p class="section-subtitle">Every feature solves a real problem faced by Kerala businesses and job seekers</p>
+                <h2 class="section-title">Simple, Fair Pricing</h2>
+                <p class="section-subtitle">Job seekers always free. Employers pay only for results.</p>
             </div>
             
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="feature-badge">For Employers</span>
-                    <h3>Voice Job Posts</h3>
-                    <p>Record 30-second voice note describing job. Perfect for shop owners who prefer speaking over typing.</p>
-                    <div style="margin-top: 1rem; padding: 1rem; background: var(--light); border-radius: 8px;">
-                        <small><i class="fas fa-microphone"></i> "വെയിറ്റർ വേണം. 10-6 work. ₹600 daily. Near SM Street."</small>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-badge">For Job Seekers</span>
-                    <h3>One-Click Apply</h3>
-                    <p>No resumes needed. Apply with phone number + location. We handle the rest. Perfect for all education levels.</p>
-                    <div style="margin-top: 1rem; padding: 1rem; background: var(--light); border-radius: 8px;">
-                        <small><i class="fas fa-bolt"></i> 3-second apply process</small>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-badge">Trust & Safety</span>
-                    <h3>Triple Verification</h3>
-                    <p>1. Phone verification<br>2. Business address check<br>3. Previous hire ratings<br>Zero fake jobs guaranteed.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-badge">Smart Technology</span>
-                    <h3>Location Intelligence</h3>
-                    <p>Auto-calculates travel time. Shows "15 minutes by bus" for each job. Suggests best transport routes.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-badge">Festival Ready</span>
-                    <h3>Seasonal Hiring Boost</h3>
-                    <p>Special features for Onam, Christmas, Vishu seasons. Temporary staffing solutions. Pre-screened festival workers.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-badge">Revenue Model</span>
-                    <h3>Fair & Transparent Pricing</h3>
-                    <p>₹299 per job post (less than newspaper ad). ₹1999 monthly unlimited. Job seekers always free. No hidden charges.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Business Model -->
-    <section class="model-section" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Simple, Transparent Pricing</h2>
-                <p class="section-subtitle">Designed for Kerala's small businesses - affordable and effective</p>
-            </div>
-            
-            <div class="pricing-table">
+            <div class="pricing-grid">
                 <div class="pricing-card">
                     <h3>Basic Boost</h3>
                     <div class="price">₹299</div>
-                    <p>One job post</p>
+                    <p>Single job post</p>
                     <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.2rem;">
                         <li>7-day visibility</li>
                         <li>Basic verification</li>
@@ -957,272 +1015,11 @@
                 </div>
                 
                 <div class="pricing-card popular">
-                    <h3>Premium Monthly</h3>
+                    <h3>Business Monthly</h3>
                     <div class="price">₹1,999</div>
                     <p>Unlimited hiring</p>
                     <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.2rem;">
                         <li>Unlimited job posts</li>
                         <li>Priority verification</li>
                         <li>Featured employer badge</li>
-                        <li>Dedicated support</li>
-                        <li>Advanced analytics</li>
-                        <li>Resume database access</li>
-                    </ul>
-                    <a href="https://wa.me/918086514150?text=I%20want%20the%20Premium%20Monthly%20plan%20for%20%E2%82%B91,999" 
-                       class="btn" style="background: var(--accent); color: var(--dark); width: 100%;">
-                        Best Value
-                    </a>
-                </div>
-                
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">Custom</div>
-                    <p>For chains & agencies</p>
-                    <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.2rem;">
-                        <li>Multiple locations</li>
-                        <li>Custom integrations</li>
-                        <li>Bulk hiring</li>
-                        <li>API access</li>
-                        <li>Dedicated account manager</li>
-                        <li>White-label options</li>
-                    </ul>
-                    <a href="https://wa.me/918086514150?text=I%20need%20Enterprise%20plan%20for%20my%20business" 
-                       class="btn" style="background: var(--secondary); color: white; width: 100%;">
-                        Contact Sales
-                    </a>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: white; border-radius: 12px;">
-                <h3>First Job Post FREE for Kozhikode Businesses!</h3>
-                <p>Limited time launch offer. Experience our premium service before paying.</p>
-                <a href="https://wa.me/918086514150?text=I%20want%20my%20FREE%20first%20job%20post%20in%20Kozhikode" 
-                   class="btn" style="background: linear-gradient(135deg, var(--secondary), #0D8A2E); color: white; margin-top: 1rem;">
-                    <i class="fas fa-gift"></i> Claim Free Job Post
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kozhikode Focus -->
-    <section class="city-section" id="kozhikode">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Launching First in Kozhikode</h2>
-                <p class="section-subtitle">Our home ground advantage - deep local understanding</p>
-            </div>
-            
-            <div class="city-highlight">
-                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Why Kozhikode First?</h3>
-                <p>Kozhikode represents Kerala's perfect job market mix: bustling tourism, vibrant retail, educational hubs, and traditional businesses. Our local knowledge gives us unfair advantage.</p>
-                
-                <div class="zone-grid">
-                    <div class="zone-card">
-                        <h4><i class="fas fa-store"></i> SM Street & Mittayi Theruvu</h4>
-                        <p>100+ shops needing sales staff. Festival rush hiring solutions.</p>
-                    </div>
-                    <div class="zone-card">
-                        <h4><i class="fas fa-utensils"></i> Beach Road Restaurants</h4>
-                        <p>High staff turnover. Urgent hiring for tourist seasons.</p>
-                    </div>
-                    <div class="zone-card">
-                        <h4><i class="fas fa-graduation-cap"></i> College Areas (NIT, IIM)</h4>
-                        <p>Student part-time jobs. Hostel, canteen, photocenter staffing.</p>
-                    </div>
-                    <div class="zone-card">
-                        <h4><i class="fas fa-building"></i> Hilite Business Park</h4>
-                        <p>Office staffing, receptionists, data entry professionals.</p>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 2rem; padding: 1.5rem; background: var(--light-blue); border-radius: 12px;">
-                    <h4><i class="fas fa-bullseye"></i> Kozhikode Launch Targets</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                        <div><strong>Month 1:</strong> 50 businesses, 200 job seekers</div>
-                        <div><strong>Month 2:</strong> ₹50,000 monthly revenue</div>
-                        <div><strong>Month 3:</strong> Expand to Thrissur</div>
-                        <div><strong>Month 6:</strong> Full Kerala coverage</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials (Placeholder) -->
-    <section class="testimonial-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Success Stories from Kerala</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Real businesses, real results</p>
-            </div>
-            
-            <div class="testimonial-slider">
-                <div class="testimonial-card">
-                    <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem;">
-                        "As a restaurant owner on Beach Road, finding waiters was a daily struggle. VENDA found me 3 qualified staff in 24 hours. Game changer!"
-                    </p>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 50%;"></div>
-                        <div>
-                            <h4 style="margin-bottom: 0.2rem;">Restaurant Owner</h4>
-                            <small style="opacity: 0.8;">Beach Road, Kozhikode</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="cta-section" id="contact">
-        <div class="container">
-            <div class="cta-box">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Transform Hiring in Kerala?</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
-                    Join the platform built by Keralites, for Keralites. No more hiring headaches. No more job scams.
-                </p>
-                
-                <div class="hero-buttons">
-                    <a href="https://wa.me/918086514150" class="btn btn-primary" style="font-size: 1.1rem;">
-                        <i class="fab fa-whatsapp"></i> WhatsApp for Immediate Help
-                    </a>
-                </div>
-                
-                <div style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                    <div>
-                        <h4><i class="fas fa-phone-alt"></i> Call Us</h4>
-                        <p style="font-size: 1.2rem;">+91 8086514150</p>
-                    </div>
-                    <div>
-                        <h4><i class="fas fa-envelope"></i> Email</h4>
-                        <p style="font-size: 1.1rem;">hello@vendakerala.in</p>
-                    </div>
-                    <div>
-                        <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
-                        <p style="font-size: 1.1rem;">Kozhikode, Kerala</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="premium-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <div class="footer-logo">VENDA<span>KERALA</span></div>
-                    <p style="margin: 1rem 0; opacity: 0.8;">
-                        Kerala's premium local job platform. Verified jobs, trusted hiring.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4>Quick Links</h4>
-                    <a href="#home" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Home</a>
-                    <a href="#problem" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">The Problem</a>
-                    <a href="#solution" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Our Solution</a>
-                    <a href="#features" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Features</a>
-                    <a href="#pricing" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Pricing</a>
-                </div>
-                
-                <div>
-                    <h4>For Businesses</h4>
-                    <a href="https://wa.me/918086514150?text=I%20want%20to%20post%20a%20job" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Post a Job</a>
-                    <a href="#pricing" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Pricing Plans</a>
-                    <a href="#" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Success Stories</a>
-                    <a href="#" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Business Resources</a>
-                </div>
-                
-                <div>
-                    <h4>For Job Seekers</h4>
-                    <a href="https://wa.me/918086514150?text=I'm%20looking%20for%20a%20job" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Find Jobs</a>
-                    <a href="#" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Career Tips</a>
-                    <a href="#" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Resume Builder</a>
-                    <a href="#" style="display: block; color: rgba(255,255,255,0.8); text-decoration: none; margin-top: 0.8rem;">Skill Development</a>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>© 2024 VENDA KERALA. All rights reserved. | "വേണ്ടുന്നവർക്ക് വേണ്ടുന്ന ജോലി"</p>
-                <p style="margin-top: 0.5rem; font-size: 0.85rem;">Made with ❤️ in Kerala, for Kerala</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/918086514150" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.style.padding = '0.7rem 0';
-                header.style.boxShadow = '0 8px 30px rgba(10, 77, 140, 0.25)';
-            } else {
-                header.style.padding = '1rem 0';
-                header.style.boxShadow = '0 4px 25px rgba(10, 77, 140, 0.2)';
-            }
-        });
-
-        // Animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fadeInUp');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements
-        document.querySelectorAll('.problem-card, .feature-card, .pricing-card, .zone-card').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // WhatsApp pre-filled messages
-        function setWhatsAppMessage(type) {
-            const messages = {
-                hire: "Hi VENDA! I need to hire staff urgently. Can you help?",
-                job: "Hi VENDA! I'm looking for a job in Kerala. What opportunities do you have?",
-                free: "Hi VENDA! I want to claim my FREE first job post in Kozhikode."
-            };
-            
-            const whatsappBtn = document.querySelector('.whatsapp-float');
-            if (messages[type]) {
-                whatsappBtn.href = `https://wa.me/918086514150?text=${encodeURIComponent(messages[type])}`;
-            }
-        }
-    </script>
-</body>
-</html>
+                        <li>D
