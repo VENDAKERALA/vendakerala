@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ===== MODERN THEME ===== */
+        /* ===== YOUR ORIGINAL VENDA COLOR PALETTE ===== */
         :root {
-            --primary: #2E8B57;           /* Sea Green - Trust & Growth */
-            --primary-dark: #1F6B47;      /* Darker Green */
-            --secondary: #FF6B35;         /* Orange - Energy & Action */
-            --accent: #4A90E2;            /* Blue - Professional */
-            --accent-light: #7BB4FF;      /* Light Blue */
-            --dark: #2C3E50;              /* Dark Blue-Gray */
-            --light: #F8FAFC;             /* Light Gray */
-            --light-green: #E8F5E9;       /* Light Green */
+            --primary: #0A4D8C;           /* VENDA Trust Blue */
+            --primary-dark: #083A6D;      /* Darker Blue */
+            --secondary: #0B6623;         /* Kerala Green */
+            --accent: #FFB300;            /* Gold - Success */
+            --accent-light: #FFD54F;      /* Light Gold */
+            --dark: #1A237E;              /* Deep Navy */
+            --light: #F8F9FA;             /* Light Gray */
+            --light-blue: #E3F2FD;        /* Sky Blue */
             --white: #FFFFFF;
-            --text: #34495E;              /* Text Color */
-            --text-light: #7F8C8D;        /* Light Text */
-            --success: #27AE60;           /* Green */
-            --warning: #F39C12;           /* Orange */
-            --danger: #E74C3C;            /* Red */
+            --text: #2D3748;              /* Text Color */
+            --text-light: #718096;        /* Light Text */
+            --success: #0B6623;           /* Green */
+            --warning: #E65100;           /* Orange */
+            --danger: #D32F2F;            /* Red */
         }
 
         * {
@@ -82,7 +82,7 @@
         }
 
         .logo-icon {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--primary), var(--dark));
             color: white;
             width: 42px;
             height: 42px;
@@ -101,7 +101,7 @@
         }
 
         .logo-text span {
-            color: var(--secondary);
+            color: var(--accent);
         }
 
         .nav-menu {
@@ -121,7 +121,7 @@
         }
 
         .nav-link:hover {
-            color: var(--secondary);
+            color: var(--primary);
         }
 
         .nav-link.active {
@@ -167,7 +167,7 @@
 
         .btn-hire:hover, .btn-job:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(10, 77, 140, 0.15);
         }
 
         /* ===== DUAL HERO SECTION ===== */
@@ -180,7 +180,7 @@
         }
 
         .hero-left {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
             color: white;
             padding: 5rem 3rem;
             display: flex;
@@ -189,7 +189,7 @@
         }
 
         .hero-right {
-            background: linear-gradient(135deg, var(--secondary) 0%, #FF8535 100%);
+            background: linear-gradient(135deg, var(--secondary) 0%, #0D8A2E 100%);
             color: white;
             padding: 5rem 3rem;
             display: flex;
@@ -229,7 +229,7 @@
         .hero-btn {
             display: inline-block;
             padding: 1rem 2rem;
-            background: white;
+            background: var(--accent);
             color: var(--dark);
             text-decoration: none;
             border-radius: 10px;
@@ -238,12 +238,13 @@
             transition: all 0.3s;
             text-align: center;
             margin-top: 1rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(255, 179, 0, 0.2);
         }
 
         .hero-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 20px rgba(255, 179, 0, 0.3);
+            background: var(--accent-light);
         }
 
         /* ===== QUICK FEATURES ===== */
@@ -271,13 +272,13 @@
 
         .feature-box:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(10, 77, 140, 0.1);
         }
 
         .feature-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--light-green), white);
+            background: linear-gradient(135deg, var(--light-blue), white);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -285,7 +286,7 @@
             font-size: 1.5rem;
             color: var(--primary);
             margin: 0 auto 1.5rem;
-            border: 2px solid rgba(46, 139, 87, 0.1);
+            border: 2px solid rgba(10, 77, 140, 0.1);
         }
 
         /* ===== SECTION STYLES ===== */
@@ -324,13 +325,13 @@
             background: var(--light);
             padding: 2.5rem;
             border-radius: 15px;
-            border-left: 5px solid var(--accent);
+            border-left: 5px solid var(--primary);
             transition: all 0.3s;
         }
 
         .jobseeker-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(74, 144, 226, 0.1);
+            box-shadow: 0 10px 25px rgba(10, 77, 140, 0.1);
         }
 
         /* ===== FOR EMPLOYERS ===== */
@@ -357,7 +358,7 @@
 
         .employer-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(255, 107, 53, 0.1);
+            box-shadow: 0 15px 30px rgba(11, 102, 35, 0.1);
         }
 
         /* ===== HOW IT WORKS ===== */
@@ -380,7 +381,7 @@
             left: 10%;
             right: 10%;
             height: 3px;
-            background: linear-gradient(to right, var(--primary), var(--accent));
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             z-index: 1;
         }
 
@@ -395,7 +396,7 @@
         .step-circle {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--primary), var(--dark));
             color: white;
             border-radius: 50%;
             display: flex;
@@ -404,7 +405,7 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin: 0 auto 1.5rem;
-            box-shadow: 0 8px 20px rgba(46, 139, 87, 0.3);
+            box-shadow: 0 8px 20px rgba(10, 77, 140, 0.3);
             border: 5px solid white;
         }
 
@@ -432,7 +433,7 @@
         }
 
         .pricing-card.featured {
-            border-color: var(--secondary);
+            border-color: var(--accent);
             transform: scale(1.05);
             position: relative;
             overflow: hidden;
@@ -443,8 +444,8 @@
             position: absolute;
             top: 20px;
             right: -35px;
-            background: var(--secondary);
-            color: white;
+            background: var(--accent);
+            color: var(--dark);
             padding: 0.3rem 3rem;
             font-size: 0.8rem;
             font-weight: 700;
@@ -517,8 +518,8 @@
         }
 
         .cta-btn-primary {
-            background: white;
-            color: var(--primary);
+            background: var(--accent);
+            color: var(--dark);
         }
 
         .cta-btn-secondary {
@@ -530,6 +531,15 @@
         .cta-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-btn-primary:hover {
+            background: var(--accent-light);
+        }
+
+        .cta-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
         }
 
         /* ===== FOOTER ===== */
@@ -554,7 +564,7 @@
         }
 
         .footer-logo span {
-            color: var(--secondary);
+            color: var(--accent);
         }
 
         .footer-links h4 {
@@ -572,7 +582,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--secondary);
+            color: var(--accent);
         }
 
         .contact-info {
@@ -607,7 +617,8 @@
         }
 
         .social-icon:hover {
-            background: var(--secondary);
+            background: var(--accent);
+            color: var(--dark);
             transform: translateY(-3px);
         }
 
@@ -844,7 +855,7 @@
             
             <div class="jobseekers-grid">
                 <div class="jobseeker-card animate-fadeIn">
-                    <h3><i class="fas fa-search" style="color: var(--accent);"></i> Smart Job Search</h3>
+                    <h3><i class="fas fa-search" style="color: var(--primary);"></i> Smart Job Search</h3>
                     <p>Filter jobs by location, salary, job type, and distance. Find opportunities within 5km of your home.</p>
                     <ul style="margin-top: 1rem; padding-left: 1.2rem;">
                         <li>Location-based matching</li>
@@ -855,7 +866,7 @@
                 </div>
                 
                 <div class="jobseeker-card animate-fadeIn animate-delay-1">
-                    <h3><i class="fas fa-bell" style="color: var(--accent);"></i> Instant Job Alerts</h3>
+                    <h3><i class="fas fa-bell" style="color: var(--primary);"></i> Instant Job Alerts</h3>
                     <p>Get WhatsApp notifications when new jobs match your profile. Never miss an opportunity.</p>
                     <ul style="margin-top: 1rem; padding-left: 1.2rem;">
                         <li>Real-time notifications</li>
@@ -866,7 +877,7 @@
                 </div>
                 
                 <div class="jobseeker-card animate-fadeIn animate-delay-2">
-                    <h3><i class="fas fa-user-check" style="color: var(--accent);"></i> Profile Verification</h3>
+                    <h3><i class="fas fa-user-check" style="color: var(--primary);"></i> Profile Verification</h3>
                     <p>Get verified badge on your profile. Employers trust and prioritize verified candidates.</p>
                     <ul style="margin-top: 1rem; padding-left: 1.2rem;">
                         <li>Phone verification</li>
@@ -879,7 +890,7 @@
             
             <div style="text-align: center; margin-top: 3rem;">
                 <a href="https://wa.me/918086514150?text=I%20want%20to%20register%20as%20a%20job%20seeker" 
-                   class="hero-btn" style="background: var(--accent); color: white;">
+                   class="hero-btn">
                     <i class="fas fa-user-plus"></i> Register as Job Seeker (Free)
                 </a>
             </div>
@@ -931,7 +942,7 @@
             
             <div style="text-align: center; margin-top: 3rem;">
                 <a href="https://wa.me/918086514150?text=I%20want%20to%20post%20a%20job%20as%20an%20employer" 
-                   class="hero-btn" style="background: var(--secondary); color: white;">
+                   class="hero-btn">
                     <i class="fas fa-briefcase"></i> Post Your First Job (Free Trial)
                 </a>
             </div>
@@ -995,7 +1006,7 @@
                         <li>Candidate filtering</li>
                     </ul>
                     <a href="https://wa.me/918086514150?text=I%20want%20Basic%20Post%20plan%20%E2%82%B9299" 
-                       class="hero-btn" style="background: var(--primary); color: white; width: 100%;">
+                       class="hero-btn" style="width: 100%;">
                         Choose Basic
                     </a>
                 </div>
@@ -1013,7 +1024,7 @@
                         <li>Dedicated support</li>
                     </ul>
                     <a href="https://wa.me/918086514150?text=I%20want%20Business%20Plan%20%E2%82%B91,999" 
-                       class="hero-btn" style="background: var(--secondary); color: white; width: 100%;">
+                       class="hero-btn" style="width: 100%;">
                         Most Popular
                     </a>
                 </div>
@@ -1041,7 +1052,7 @@
                 <h3>First Job Post FREE for New Employers!</h3>
                 <p>Experience our platform before you pay. Limited time offer.</p>
                 <a href="https://wa.me/918086514150?text=I%20want%20FREE%20first%20job%20post" 
-                   class="hero-btn" style="background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; margin-top: 1rem;">
+                   class="hero-btn" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; margin-top: 1rem;">
                     <i class="fas fa-gift"></i> Claim Free Job Post
                 </a>
             </div>
