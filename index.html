@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENDA | Local Job Platform - Verified Jobs & Trusted Hiring</title>
-    <meta name="description" content="VENDA connects businesses with verified local talent and job seekers with trusted opportunities. 24-hour hiring, salary transparency.">
+    <title>VENDA | Kerala's Job Platform - Find Jobs & Hire Staff</title>
+    <meta name="description" content="VENDA connects job seekers with employers in Kerala. Find verified local jobs or hire qualified staff fast. 24-hour hiring, salary transparency.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* ===== MODERN THEME ===== */
         :root {
-            --primary: #2563EB;           /* Professional Blue */
-            --primary-dark: #1D4ED8;      /* Darker Blue */
-            --secondary: #059669;         /* Success Green */
-            --accent: #F59E0B;            /* Warm Amber */
-            --accent-light: #FBBF24;      /* Light Amber */
-            --dark: #1E293B;              /* Charcoal */
+            --primary: #2E8B57;           /* Sea Green - Trust & Growth */
+            --primary-dark: #1F6B47;      /* Darker Green */
+            --secondary: #FF6B35;         /* Orange - Energy & Action */
+            --accent: #4A90E2;            /* Blue - Professional */
+            --accent-light: #7BB4FF;      /* Light Blue */
+            --dark: #2C3E50;              /* Dark Blue-Gray */
             --light: #F8FAFC;             /* Light Gray */
-            --light-blue: #EFF6FF;        /* Sky Blue */
+            --light-green: #E8F5E9;       /* Light Green */
             --white: #FFFFFF;
-            --text: #334155;              /* Slate Gray */
-            --text-light: #64748B;        /* Medium Gray */
-            --success: #059669;           /* Green */
-            --warning: #EA580C;           /* Orange */
-            --danger: #DC2626;            /* Red */
+            --text: #34495E;              /* Text Color */
+            --text-light: #7F8C8D;        /* Light Text */
+            --success: #27AE60;           /* Green */
+            --warning: #F39C12;           /* Orange */
+            --danger: #E74C3C;            /* Red */
         }
 
         * {
@@ -46,14 +46,14 @@
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 1.3;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
         }
 
         /* ===== HEADER ===== */
@@ -65,7 +65,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(30, 41, 59, 0.08);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
         }
 
@@ -83,21 +83,25 @@
 
         .logo-icon {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--white);
+            color: white;
             width: 42px;
             height: 42px;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
-            font-weight: bold;
+            font-size: 1.2rem;
+            font-weight: 800;
         }
 
         .logo-text {
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: 1.6rem;
+            font-weight: 800;
             color: var(--primary);
+        }
+
+        .logo-text span {
+            color: var(--secondary);
         }
 
         .nav-menu {
@@ -107,27 +111,28 @@
         }
 
         .nav-link {
-            color: var(--text);
+            color: var(--dark);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.95rem;
             transition: all 0.3s;
+            padding: 0.5rem 0;
             position: relative;
         }
 
         .nav-link:hover {
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         .nav-link.active {
             color: var(--primary);
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .nav-link.active::after {
             content: '';
             position: absolute;
-            bottom: -8px;
+            bottom: 0;
             left: 0;
             width: 100%;
             height: 3px;
@@ -135,151 +140,158 @@
             border-radius: 2px;
         }
 
-        .header-cta {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: var(--white);
+        .header-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .header-btn {
             padding: 0.7rem 1.5rem;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
             font-size: 0.9rem;
         }
 
-        .header-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+        .btn-hire {
+            background: var(--primary);
+            color: white;
         }
 
-        /* ===== HERO SECTION ===== */
-        .hero-section {
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(5, 150, 105, 0.03));
-            padding: 10rem 0 6rem;
-            text-align: center;
-            margin-top: 70px;
+        .btn-job {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-hire:hover, .btn-job:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ===== DUAL HERO SECTION ===== */
+        .dual-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin-top: 80px;
+            min-height: 600px;
+        }
+
+        .hero-left {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-right {
+            background: linear-gradient(135deg, var(--secondary) 0%, #FF8535 100%);
+            color: white;
+            padding: 5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .hero-title {
-            font-size: 3.2rem;
-            font-weight: 700;
+            font-size: 2.8rem;
             margin-bottom: 1.5rem;
-            color: var(--dark);
             line-height: 1.2;
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
             line-height: 1.6;
         }
 
-        .dual-focus {
+        .hero-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .hero-features li {
+            margin-bottom: 0.8rem;
             display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
-        }
-
-        .focus-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-            width: 320px;
-            text-align: center;
-            transition: all 0.3s;
-            border-top: 4px solid var(--primary);
-        }
-
-        .focus-card.employer {
-            border-top-color: var(--primary);
-        }
-
-        .focus-card.seeker {
-            border-top-color: var(--secondary);
-        }
-
-        .focus-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .focus-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(5, 150, 105, 0.1));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin: 0 auto 1.5rem;
-        }
-
-        .focus-card.seeker .focus-icon {
-            color: var(--secondary);
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
             align-items: center;
             gap: 10px;
+        }
+
+        .hero-features i {
+            color: var(--accent-light);
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.05rem;
             transition: all 0.3s;
-            font-size: 1rem;
-            border: none;
-            cursor: pointer;
+            text-align: center;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: var(--white);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
-        }
-
-        .btn-primary:hover {
+        .hero-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .btn-secondary {
-            background: linear-gradient(135deg, var(--secondary), #0D8A2E);
-            color: var(--white);
-            box-shadow: 0 6px 20px rgba(5, 150, 105, 0.25);
-        }
-
-        .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(5, 150, 105, 0.35);
-        }
-
-        /* ===== FEATURES HIGHLIGHT ===== */
-        .features-highlight {
-            padding: 5rem 0;
+        /* ===== QUICK FEATURES ===== */
+        .quick-features {
+            padding: 4rem 0;
             background: var(--light);
         }
 
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--light-green), white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 0 auto 1.5rem;
+            border: 2px solid rgba(46, 139, 87, 0.1);
+        }
+
+        /* ===== SECTION STYLES ===== */
         .section-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         .section-title {
@@ -295,179 +307,105 @@
             margin: 0 auto;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s;
-            border: 1px solid rgba(0, 0, 0, 0.03);
-            text-align: center;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
-            border-color: var(--primary);
-        }
-
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(245, 158, 11, 0.1));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin: 0 auto 1.5rem;
-        }
-
-        /* ===== CAREER TOOLS SECTION ===== */
-        .tools-section {
+        /* ===== FOR JOB SEEKERS ===== */
+        .jobseekers-section {
             padding: 5rem 0;
-            background: var(--white);
+            background: white;
         }
 
-        .tools-grid {
+        .jobseekers-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
             margin-top: 3rem;
         }
 
-        .tool-card {
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(5, 150, 105, 0.03));
-            padding: 3rem 2.5rem;
-            border-radius: 16px;
+        .jobseeker-card {
+            background: var(--light);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--accent);
             transition: all 0.3s;
-            border: 1px solid rgba(37, 99, 235, 0.1);
-            text-align: center;
         }
 
-        .tool-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.1);
-            border-color: var(--primary);
+        .jobseeker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(74, 144, 226, 0.1);
         }
 
-        .tool-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin: 0 auto 1.5rem;
+        /* ===== FOR EMPLOYERS ===== */
+        .employers-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--light) 0%, #F0F7FF 100%);
+        }
+
+        .employers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .employer-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary);
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .employer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 107, 53, 0.1);
         }
 
         /* ===== HOW IT WORKS ===== */
         .process-section {
             padding: 5rem 0;
-            background: var(--light);
+            background: white;
         }
 
-        .process-container {
+        .process-steps {
             display: flex;
             justify-content: space-between;
-            gap: 2rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
+            margin: 3rem 0;
+            position: relative;
         }
 
-        .process-column {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .process-title {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            z-index: 1;
         }
 
         .process-step {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            border-left: 4px solid var(--primary);
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem;
         }
 
-        .process-step.seeker {
-            border-left-color: var(--secondary);
-        }
-
-        .step-number {
-            display: inline-block;
-            width: 32px;
-            height: 32px;
-            background: var(--primary);
+        .step-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             color: white;
             border-radius: 50%;
-            text-align: center;
-            line-height: 32px;
-            font-weight: 600;
-            margin-right: 10px;
-        }
-
-        .process-step.seeker .step-number {
-            background: var(--secondary);
-        }
-
-        /* ===== PROBLEM SECTION ===== */
-        .problem-section {
-            padding: 5rem 0;
-            background: var(--white);
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .problem-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .problem-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
-        }
-
-        .problem-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(220, 38, 38, 0.1);
-            color: var(--danger);
-            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 8px 20px rgba(46, 139, 87, 0.3);
+            border: 5px solid white;
         }
 
         /* ===== PRICING ===== */
@@ -476,7 +414,7 @@
             background: var(--light);
         }
 
-        .pricing-grid {
+        .pricing-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
@@ -484,93 +422,114 @@
         }
 
         .pricing-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             text-align: center;
             transition: all 0.3s;
             border: 2px solid transparent;
         }
 
-        .pricing-card.popular {
-            border-color: var(--accent);
+        .pricing-card.featured {
+            border-color: var(--secondary);
             transform: scale(1.05);
             position: relative;
             overflow: hidden;
         }
 
-        .pricing-card.popular::before {
-            content: 'MOST POPULAR';
+        .pricing-card.featured::before {
+            content: 'POPULAR';
             position: absolute;
-            top: 15px;
-            right: -30px;
-            background: var(--accent);
-            color: var(--dark);
+            top: 20px;
+            right: -35px;
+            background: var(--secondary);
+            color: white;
             padding: 0.3rem 3rem;
             font-size: 0.8rem;
             font-weight: 700;
             transform: rotate(45deg);
         }
 
-        .price {
+        .price-amount {
             font-size: 3rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--primary);
             margin: 1rem 0;
         }
 
-        /* ===== CITY FOCUS ===== */
-        .city-section {
-            padding: 5rem 0;
-            background: var(--white);
+        .price-period {
+            color: var(--text-light);
+            font-size: 0.9rem;
         }
 
-        .city-highlight {
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(5, 150, 105, 0.03));
-            border-radius: 20px;
-            padding: 3rem;
-            margin-top: 2rem;
-            border: 1px solid rgba(37, 99, 235, 0.1);
-        }
-
-        .zone-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        .pricing-features {
+            list-style: none;
             margin: 2rem 0;
+            text-align: left;
         }
 
-        .zone-card {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid rgba(37, 99, 235, 0.1);
-            transition: all 0.3s;
+        .pricing-features li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
         }
 
-        .zone-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.1);
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
         }
 
         /* ===== CTA SECTION ===== */
         .cta-section {
             padding: 5rem 0;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
             text-align: center;
         }
 
-        .cta-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 3rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .cta-content {
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.05rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         /* ===== FOOTER ===== */
@@ -580,25 +539,55 @@
             padding: 4rem 0 2rem;
         }
 
-        .footer-grid {
+        .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5rem;
+            gap: 3rem;
             margin-bottom: 3rem;
         }
 
         .footer-logo {
             font-size: 1.8rem;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 1rem;
-            color: var(--white);
+            color: white;
         }
 
         .footer-logo span {
-            color: var(--accent);
+            color: var(--secondary);
         }
 
-        .social-links {
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links a {
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .social-icons {
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
@@ -618,8 +607,7 @@
         }
 
         .social-icon:hover {
-            background: var(--accent);
-            color: var(--dark);
+            background: var(--secondary);
             transform: translateY(-3px);
         }
 
@@ -645,74 +633,79 @@
             align-items: center;
             justify-content: center;
             font-size: 28px;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
             z-index: 1000;
             text-decoration: none;
             transition: all 0.3s;
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
         }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
+            .dual-hero {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-left, .hero-right {
+                padding: 4rem 2rem;
+            }
+            
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
             }
             
-            .dual-focus {
+            .process-steps {
                 flex-direction: column;
-                align-items: center;
+                gap: 3rem;
             }
             
-            .focus-card {
-                width: 100%;
-                max-width: 400px;
+            .process-steps::before {
+                display: none;
             }
             
             .nav-menu {
                 display: none;
             }
             
-            .pricing-card.popular {
+            .pricing-card.featured {
                 transform: none;
             }
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 0 1rem;
-            }
-            
-            .hero-title {
-                font-size: 2rem;
+                padding: 0 1.5rem;
             }
             
             .section-title {
                 font-size: 2rem;
             }
             
-            .btn {
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-btn {
                 width: 100%;
+                max-width: 300px;
                 justify-content: center;
             }
             
-            .hero-buttons {
-                flex-direction: column;
-            }
-            
-            .process-container {
-                flex-direction: column;
+            .header-buttons {
+                display: none;
             }
         }
 
         /* ===== ANIMATIONS ===== */
-        @keyframes fadeInUp {
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -720,8 +713,8 @@
             }
         }
 
-        .animate-fadeInUp {
-            animation: fadeInUp 0.6s ease-out forwards;
+        .animate-fadeIn {
+            animation: fadeIn 0.6s ease-out forwards;
         }
 
         .animate-delay-1 { animation-delay: 0.2s; }
@@ -735,158 +728,212 @@
         <div class="container header-container">
             <div class="logo-wrapper">
                 <div class="logo-icon">V</div>
-                <div class="logo-text">VENDA</div>
+                <div class="logo-text">VEN<span>DA</span></div>
             </div>
             
             <nav class="nav-menu">
                 <a href="#home" class="nav-link active">Home</a>
-                <a href="#tools" class="nav-link">Career Tools</a>
+                <a href="#jobseekers" class="nav-link">Job Seekers</a>
+                <a href="#employers" class="nav-link">Employers</a>
                 <a href="#features" class="nav-link">Features</a>
                 <a href="#process" class="nav-link">How It Works</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="https://wa.me/918086514150" class="header-cta">
-                    <i class="fab fa-whatsapp"></i> Get Started
-                </a>
             </nav>
+            
+            <div class="header-buttons">
+                <a href="#employers" class="header-btn btn-hire">Hire Staff</a>
+                <a href="#jobseekers" class="header-btn btn-job">Find Jobs</a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <div class="container">
-            <h1 class="hero-title animate-fadeInUp">Find Jobs & Hire Talent Faster</h1>
-            <p class="hero-subtitle animate-fadeInUp animate-delay-1">
-                Connecting verified local businesses with qualified job seekers. No fake posts. No hiring delays. Just real results.
+    <!-- Dual Hero Section -->
+    <section class="dual-hero" id="home">
+        <div class="hero-left animate-fadeIn">
+            <h1 class="hero-title">Find Your Perfect Job in Kerala</h1>
+            <p class="hero-subtitle">
+                Verified local jobs with salary transparency. No fake posts. Apply in seconds.
+                Start your career journey today.
             </p>
             
-            <div class="dual-focus">
-                <div class="focus-card employer animate-fadeInUp animate-delay-2">
-                    <div class="focus-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>For Employers</h3>
-                    <p>Hire verified local staff in 24 hours. Post jobs in 2 minutes.</p>
-                    <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I%20need%20to%20hire%20staff." 
-                       class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">
-                        <i class="fas fa-user-plus"></i> Hire Staff Now
-                    </a>
-                </div>
-                
-                <div class="focus-card seeker animate-fadeInUp animate-delay-2">
-                    <div class="focus-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3>For Job Seekers</h3>
-                    <p>Find verified local jobs with transparent salaries. Apply in seconds.</p>
-                    <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I'm%20looking%20for%20a%20job." 
-                       class="btn btn-secondary" style="margin-top: 1.5rem; width: 100%;">
-                        <i class="fas fa-search"></i> Find Jobs Now
-                    </a>
-                </div>
-            </div>
+            <ul class="hero-features">
+                <li><i class="fas fa-check-circle"></i> 100% Verified Employers</li>
+                <li><i class="fas fa-check-circle"></i> Salary Clearly Displayed</li>
+                <li><i class="fas fa-check-circle"></i> Jobs Within Your Location</li>
+                <li><i class="fas fa-check-circle"></i> Malayalam Language Support</li>
+            </ul>
             
-            <div class="hero-buttons">
-                <div style="text-align: center; width: 100%;">
-                    <p style="color: var(--text-light); margin-top: 2rem; font-size: 0.95rem;">
-                        <i class="fas fa-shield-alt"></i> 100% Verified • 
-                        <i class="fas fa-rupee-sign"></i> Salary Transparent • 
-                        <i class="fas fa-bolt"></i> 24-Hour Hiring
-                    </p>
-                </div>
-            </div>
+            <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I'm%20looking%20for%20a%20job." 
+               class="hero-btn animate-fadeIn animate-delay-1">
+                <i class="fas fa-search"></i> Start Job Search (Free)
+            </a>
+        </div>
+        
+        <div class="hero-right animate-fadeIn animate-delay-1">
+            <h1 class="hero-title">Hire Qualified Staff Fast</h1>
+            <p class="hero-subtitle">
+                Find verified local candidates in 24 hours. Reduce hiring time by 80%.
+                Perfect for shops, restaurants, offices across Kerala.
+            </p>
+            
+            <ul class="hero-features">
+                <li><i class="fas fa-check-circle"></i> 24-Hour Hiring Guarantee</li>
+                <li><i class="fas fa-check-circle"></i> Pre-Screened Candidates</li>
+                <li><i class="fas fa-check-circle"></i> Local Talent Pool</li>
+                <li><i class="fas fa-check-circle"></i> Simple Job Posting</li>
+            </ul>
+            
+            <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I%20need%20to%20hire%20staff." 
+               class="hero-btn animate-fadeIn animate-delay-2">
+                <i class="fas fa-briefcase"></i> Post Job (Free Trial)
+            </a>
         </div>
     </section>
 
-    <!-- Career Tools Section -->
-    <section class="tools-section" id="tools">
+    <!-- Quick Features -->
+    <section class="quick-features" id="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Free Career Tools</h2>
-                <p class="section-subtitle">Everything you need for your career journey - completely free</p>
-            </div>
-            
-            <div class="tools-grid">
-                <div class="tool-card animate-fadeInUp">
-                    <div class="tool-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <h3>Smart Resume Builder</h3>
-                    <p>Create professional resumes in minutes. Templates optimized for local jobs. Auto-formats for different industries.</p>
-                    <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.2rem;">
-                        <li>Industry-specific templates</li>
-                        <li>ATS-friendly formatting</li>
-                        <li>Malayalam & English options</li>
-                        <li>Download as PDF</li>
-                    </ul>
-                    <a href="https://wa.me/918086514150?text=I%20need%20help%20building%20my%20resume" 
-                       class="btn" style="background: var(--primary); color: white; width: 100%; margin-top: 1rem;">
-                        Build My Resume
-                    </a>
-                </div>
-                
-                <div class="tool-card animate-fadeInUp animate-delay-1">
-                    <div class="tool-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Career Tips & Guidance</h3>
-                    <p>Expert advice for job seekers and career growth. From interview prep to salary negotiation.</p>
-                    <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.2rem;">
-                        <li>Interview preparation guide</li>
-                        <li>Salary negotiation tips</li>
-                        <li>Skill development resources</li>
-                        <li>Career path planning</li>
-                        <li>Local job market insights</li>
-                    </ul>
-                    <a href="https://wa.me/918086514150?text=I%20need%20career%20advice" 
-                       class="btn" style="background: var(--secondary); color: white; width: 100%; margin-top: 1rem;">
-                        Get Career Advice
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-highlight" id="features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose VENDA?</h2>
-                <p class="section-subtitle">Built for real people, solving real problems</p>
+                <h2 class="section-title">Essential Tools for Success</h2>
+                <p class="section-subtitle">Everything you need to find jobs or hire staff effectively</p>
             </div>
             
             <div class="features-grid">
-                <div class="feature-card animate-fadeInUp">
+                <div class="feature-box animate-fadeIn">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Smart Resume Builder</h3>
+                    <p>Create professional resumes in minutes. Malayalam & English templates. Free download.</p>
+                </div>
+                
+                <div class="feature-box animate-fadeIn animate-delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Career Tips & Guidance</h3>
+                    <p>Expert advice for interviews, salary negotiation, and career growth in Kerala market.</p>
+                </div>
+                
+                <div class="feature-box animate-fadeIn animate-delay-2">
                     <div class="feature-icon">
                         <i class="fas fa-microphone"></i>
                     </div>
                     <h3>Voice Job Posts</h3>
-                    <p>Record voice notes instead of typing. Perfect for quick job postings.</p>
+                    <p>Record job description in Malayalam. Perfect for business owners who prefer speaking.</p>
                 </div>
                 
-                <div class="feature-card animate-fadeInUp animate-delay-1">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>One-Click Apply</h3>
-                    <p>Apply with just phone number. No complex forms or resumes needed.</p>
-                </div>
-                
-                <div class="feature-card animate-fadeInUp animate-delay-2">
+                <div class="feature-box animate-fadeIn animate-delay-3">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Triple Verification</h3>
-                    <p>Phone, address, and rating verification for complete trust.</p>
+                    <p>Phone, address, and rating verification. Zero fake jobs guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Job Seekers -->
+    <section class="jobseekers-section" id="jobseekers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">For Job Seekers</h2>
+                <p class="section-subtitle">Find the right opportunity that matches your skills and location</p>
+            </div>
+            
+            <div class="jobseekers-grid">
+                <div class="jobseeker-card animate-fadeIn">
+                    <h3><i class="fas fa-search" style="color: var(--accent);"></i> Smart Job Search</h3>
+                    <p>Filter jobs by location, salary, job type, and distance. Find opportunities within 5km of your home.</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Location-based matching</li>
+                        <li>Salary range filters</li>
+                        <li>Part-time/Full-time options</li>
+                        <li>Instant apply feature</li>
+                    </ul>
                 </div>
                 
-                <div class="feature-card animate-fadeInUp animate-delay-3">
-                    <div class="feature-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Hyper-Local Focus</h3>
-                    <p>Jobs within your locality. Travel time shown for each job.</p>
+                <div class="jobseeker-card animate-fadeIn animate-delay-1">
+                    <h3><i class="fas fa-bell" style="color: var(--accent);"></i> Instant Job Alerts</h3>
+                    <p>Get WhatsApp notifications when new jobs match your profile. Never miss an opportunity.</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Real-time notifications</li>
+                        <li>Custom alert settings</li>
+                        <li>Malayalam/English alerts</li>
+                        <li>Free SMS reminders</li>
+                    </ul>
                 </div>
+                
+                <div class="jobseeker-card animate-fadeIn animate-delay-2">
+                    <h3><i class="fas fa-user-check" style="color: var(--accent);"></i> Profile Verification</h3>
+                    <p>Get verified badge on your profile. Employers trust and prioritize verified candidates.</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Phone verification</li>
+                        <li>Skill certification</li>
+                        <li>Previous employer ratings</li>
+                        <li>Priority in job matches</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://wa.me/918086514150?text=I%20want%20to%20register%20as%20a%20job%20seeker" 
+                   class="hero-btn" style="background: var(--accent); color: white;">
+                    <i class="fas fa-user-plus"></i> Register as Job Seeker (Free)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Employers -->
+    <section class="employers-section" id="employers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">For Employers</h2>
+                <p class="section-subtitle">Find qualified staff faster and reduce hiring costs by 70%</p>
+            </div>
+            
+            <div class="employers-grid">
+                <div class="employer-card animate-fadeIn">
+                    <h3><i class="fas fa-bolt" style="color: var(--secondary);"></i> 24-Hour Hiring</h3>
+                    <p>Post a job in the morning, interview candidates by evening, hire by next day.</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Urgent hiring option</li>
+                        <li>Pre-screened candidates</li>
+                        <li>Bulk candidate shortlisting</li>
+                        <li>Interview scheduling</li>
+                    </ul>
+                </div>
+                
+                <div class="employer-card animate-fadeIn animate-delay-1">
+                    <h3><i class="fas fa-map-marker-alt" style="color: var(--secondary);"></i> Local Talent Pool</h3>
+                    <p>Access verified candidates specifically from your city or town in Kerala.</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>5km radius targeting</li>
+                        <li>City-wise candidate database</li>
+                        <li>Travel time calculation</li>
+                        <li>Local language proficiency</li>
+                    </ul>
+                </div>
+                
+                <div class="employer-card animate-fadeIn animate-delay-2">
+                    <h3><i class="fas fa-chart-line" style="color: var(--secondary);"></i> Hiring Analytics</h3>
+                    <p>Track applications, response rates, and hiring success with detailed reports.</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Application tracking</li>
+                        <li>Candidate response rates</li>
+                        <li>Time-to-hire metrics</li>
+                        <li>Monthly hiring reports</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://wa.me/918086514150?text=I%20want%20to%20post%20a%20job%20as%20an%20employer" 
+                   class="hero-btn" style="background: var(--secondary); color: white;">
+                    <i class="fas fa-briefcase"></i> Post Your First Job (Free Trial)
+                </a>
             </div>
         </div>
     </section>
@@ -895,95 +942,33 @@
     <section class="process-section" id="process">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Simple process for everyone</p>
+                <h2 class="section-title">How VENDA Works</h2>
+                <p class="section-subtitle">Simple process for both job seekers and employers</p>
             </div>
             
-            <div class="process-container">
-                <div class="process-column">
-                    <h3 class="process-title">
-                        <i class="fas fa-briefcase" style="color: var(--primary);"></i>
-                        For Employers
-                    </h3>
-                    
-                    <div class="process-step">
-                        <span class="step-number">1</span>
-                        <h4>Post Your Job</h4>
-                        <p>Describe the position, salary, and location. Use voice note or text.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <span class="step-number">2</span>
-                        <h4>Review Applicants</h4>
-                        <p>Get verified candidates within hours. Filter by location and skills.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <span class="step-number">3</span>
-                        <h4>Interview & Hire</h4>
-                        <p>Connect directly with candidates. Hire the right person fast.</p>
-                    </div>
+            <div class="process-steps">
+                <div class="process-step animate-fadeIn">
+                    <div class="step-circle">1</div>
+                    <h3>Register Free</h3>
+                    <p>Create your profile in 2 minutes. Job seekers free forever.</p>
                 </div>
                 
-                <div class="process-column">
-                    <h3 class="process-title">
-                        <i class="fas fa-user-tie" style="color: var(--secondary);"></i>
-                        For Job Seekers
-                    </h3>
-                    
-                    <div class="process-step seeker">
-                        <span class="step-number">1</span>
-                        <h4>Create Profile</h4>
-                        <p>Add your skills, location, and availability. No resume needed.</p>
-                    </div>
-                    
-                    <div class="process-step seeker">
-                        <span class="step-number">2</span>
-                        <h4>Find Jobs</h4>
-                        <p>Browse verified jobs near you. See exact salary and location.</p>
-                    </div>
-                    
-                    <div class="process-step seeker">
-                        <span class="step-number">3</span>
-                        <h4>Apply & Get Hired</h4>
-                        <p>One-click apply. Get interview calls within 24 hours.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="problem-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Problems We Solve</h2>
-                <p class="section-subtitle">Traditional hiring methods create headaches for everyone</p>
-            </div>
-            
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <i class="fas fa-comment-slash"></i>
-                    </div>
-                    <h3>WhatsApp Group Chaos</h3>
-                    <p>Fake jobs, spam messages, unverified posts. Wasting hours daily.</p>
+                <div class="process-step animate-fadeIn animate-delay-1">
+                    <div class="step-circle">2</div>
+                    <h3>Find Match</h3>
+                    <p>Our smart system matches jobs with candidates based on location & skills.</p>
                 </div>
                 
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <h3>Expensive Newspaper Ads</h3>
-                    <p>₹1500 for 2 days, few responses, no targeting capabilities.</p>
+                <div class="process-step animate-fadeIn animate-delay-2">
+                    <div class="step-circle">3</div>
+                    <h3>Connect Directly</h3>
+                    <p>Chat directly via WhatsApp or call. No middlemen.</p>
                 </div>
                 
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <i class="fas fa-user-clock"></i>
-                    </div>
-                    <h3>Corporate Portals Too Complex</h3>
-                    <p>Too expensive, English-heavy, not designed for local businesses.</p>
+                <div class="process-step animate-fadeIn animate-delay-3">
+                    <div class="step-circle">4</div>
+                    <h3>Success Tracking</h3>
+                    <p>We ensure successful hiring and provide support throughout.</p>
                 </div>
             </div>
         </div>
@@ -993,33 +978,242 @@
     <section class="pricing-section" id="pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Simple, Fair Pricing</h2>
-                <p class="section-subtitle">Job seekers always free. Employers pay only for results.</p>
+                <h2 class="section-title">Simple & Fair Pricing</h2>
+                <p class="section-subtitle">Job seekers always free. Affordable plans for businesses</p>
             </div>
             
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Basic Boost</h3>
-                    <div class="price">₹299</div>
-                    <p>Single job post</p>
-                    <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.2rem;">
-                        <li>7-day visibility</li>
-                        <li>Basic verification</li>
+            <div class="pricing-cards">
+                <div class="pricing-card animate-fadeIn">
+                    <h3>Basic Post</h3>
+                    <div class="price-amount">₹299</div>
+                    <p class="price-period">per job post</p>
+                    <ul class="pricing-features">
+                        <li>7-day job visibility</li>
                         <li>Up to 20 applications</li>
+                        <li>Basic verification</li>
                         <li>WhatsApp support</li>
+                        <li>Candidate filtering</li>
                     </ul>
-                    <a href="https://wa.me/918086514150?text=I%20want%20the%20Basic%20Boost%20plan%20for%20%E2%82%B9299" 
-                       class="btn" style="background: var(--primary); color: white; width: 100%;">
-                        Get Started
+                    <a href="https://wa.me/918086514150?text=I%20want%20Basic%20Post%20plan%20%E2%82%B9299" 
+                       class="hero-btn" style="background: var(--primary); color: white; width: 100%;">
+                        Choose Basic
                     </a>
                 </div>
                 
-                <div class="pricing-card popular">
-                    <h3>Business Monthly</h3>
-                    <div class="price">₹1,999</div>
-                    <p>Unlimited hiring</p>
-                    <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.2rem;">
+                <div class="pricing-card featured animate-fadeIn animate-delay-1">
+                    <h3>Business Plan</h3>
+                    <div class="price-amount">₹1,999</div>
+                    <p class="price-period">per month</p>
+                    <ul class="pricing-features">
                         <li>Unlimited job posts</li>
                         <li>Priority verification</li>
                         <li>Featured employer badge</li>
-                        <li>D
+                        <li>Advanced analytics</li>
+                        <li>Resume database access</li>
+                        <li>Dedicated support</li>
+                    </ul>
+                    <a href="https://wa.me/918086514150?text=I%20want%20Business%20Plan%20%E2%82%B91,999" 
+                       class="hero-btn" style="background: var(--secondary); color: white; width: 100%;">
+                        Most Popular
+                    </a>
+                </div>
+                
+                <div class="pricing-card animate-fadeIn animate-delay-2">
+                    <h3>Enterprise</h3>
+                    <div class="price-amount">Custom</div>
+                    <p class="price-period">tailored solution</p>
+                    <ul class="pricing-features">
+                        <li>Multiple locations</li>
+                        <li>Bulk hiring</li>
+                        <li>Custom integrations</li>
+                        <li>API access</li>
+                        <li>White-label options</li>
+                        <li>Account manager</li>
+                    </ul>
+                    <a href="https://wa.me/918086514150?text=I%20need%20Enterprise%20plan" 
+                       class="hero-btn" style="background: var(--dark); color: white; width: 100%;">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                <h3>First Job Post FREE for New Employers!</h3>
+                <p>Experience our platform before you pay. Limited time offer.</p>
+                <a href="https://wa.me/918086514150?text=I%20want%20FREE%20first%20job%20post" 
+                   class="hero-btn" style="background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; margin-top: 1rem;">
+                    <i class="fas fa-gift"></i> Claim Free Job Post
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content animate-fadeIn">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Start Your Journey?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
+                    Whether you're looking for a job or need to hire, VENDA makes it simple, fast, and reliable.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I%20need%20help%20finding%20a%20job" 
+                       class="cta-btn cta-btn-primary">
+                        <i class="fas fa-user-tie"></i> I Need a Job
+                    </a>
+                    <a href="https://wa.me/918086514150?text=Hi%20VENDA!%20I%20need%20to%20hire%20staff" 
+                       class="cta-btn cta-btn-secondary">
+                        <i class="fas fa-briefcase"></i> I Need Staff
+                    </a>
+                </div>
+                
+                <div style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h4><i class="fas fa-phone-alt"></i> Call Us</h4>
+                        <p style="font-size: 1.1rem;">+91 8086514150</p>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-envelope"></i> Email</h4>
+                        <p style="font-size: 1.1rem;">hello@vendakerala.in</p>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-clock"></i> Available</h4>
+                        <p style="font-size: 1.1rem;">8 AM - 10 PM Daily</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">VEN<span>DA</span></div>
+                    <p style="margin: 1rem 0; opacity: 0.8;">
+                        Connecting job seekers with employers across Kerala. Simple, fast, and trusted.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>For Job Seekers</h4>
+                    <a href="#jobseekers">Find Jobs</a>
+                    <a href="#features">Resume Builder</a>
+                    <a href="#features">Career Tips</a>
+                    <a href="#jobseekers">Job Alerts</a>
+                    <a href="#process">How It Works</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>For Employers</h4>
+                    <a href="#employers">Post Jobs</a>
+                    <a href="#pricing">Pricing Plans</a>
+                    <a href="#employers">Hire Staff</a>
+                    <a href="#employers">Hiring Analytics</a>
+                    <a href="#process">How It Works</a>
+                </div>
+                
+                <div>
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 8086514150</p>
+                        <p><i class="fas fa-envelope"></i> hello@vendakerala.in</p>
+                        <p><i class="fab fa-whatsapp"></i> WhatsApp Available</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Serving All Kerala</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 VENDA. All rights reserved. | "വേണ്ടുന്നവർക്ക് വേണ്ടുന്ന ജോലി"</p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;">Made for Kerala, with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/918086514150" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '0.8rem 0';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
+            } else {
+                header.style.padding = '1rem 0';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
+            }
+        });
+
+        // Active navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', function() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.feature-box, .jobseeker-card, .employer-card, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
